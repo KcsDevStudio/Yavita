@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/pages/login/login.css">
+    <title>Login - Yavita</title>
+</head>
+<body>
+     <header>
+        <nav class="menu-desktop">
+            <img src="assets/images/logos/LOGO 1 (2).png" alt="">
+            <ul>
+                <li>Home</li>
+                <li>Sobre Nós</li>
+                <li class="animated">Plano de Saude</li>
+                <li>Simule seu plano</li>
+                <li>Depoimento</li>
+                <li>Contato</li>
+                <li class="person-icon"></li>
+            </ul>
+        </nav>
+        <nav class="menu-moba">
+            <img src="assets/images/logos/LOGO 1 (2).png" alt="">
+            <button class="hamburger">&#9776;</button>
+            <ul>
+                <li>Home</li>
+                <li>Sobre Nós</li>
+                <li>Plano de Saude</li>
+                <li>Simule seu plano</li>
+                <li>Depoimento</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <div class="form-wrapper" id="formWrapper">
+
+                <!-- Formulário de Login -->
+                <form id="loginForm" class="form">
+                    <h2>Login</h2>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
+
+                    <button type="submit">Entrar</button>
+                    <button type="button" id="cadastre">Não sou usuário</button>
+                </form>
+
+                <!-- Formulário de Cadastro -->
+                <form id="cadastroForm" class="form-cadastro">
+                    <h2>Cadastro</h2>
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required />
+
+                    <label for="emailCadastro">Email:</label>
+                    <input type="email" id="emailCadastro" name="email" placeholder="Digite seu email" required />
+
+                    <label for="passwordCadastro">Senha:</label>
+                    <input type="password" id="passwordCadastro" name="password" placeholder="Digite sua senha" required />
+
+                    <label for="date">Confirmar Senha:</label>
+                    <input type="date" id="Data" name="date" required />
+
+                    <span class="genero-toggle" onclick="mostrarOpcoes()">Selecionar Gênero</span>
+                    <div class="opcoes-genero" id="opcoesGenero">
+                    <input type="radio" name="genero" id="masculino" value="Masculino" />
+                    <label for="masculino">Masculino</label><br/>
+
+                    <input type="radio" name="genero" id="feminino" value="Feminino" />
+                    <label for="feminino">Feminino</label><br/>
+
+                    <input type="radio" name="genero" id="outros" value="Outros" />
+                    <label for="outros">Outros</label><br/>
+                    </div>
+
+                    <button type="submit">Cadastrar</button>
+                    <button type="button" id="voltar">Voltar</button>
+                </form>
+
+            </div>
+  </div>
+    <script src="assets/js/login/scriptLogin.js"></script>
+    <script src="assets/js/menu/scrptMenu.js"></script>
+    </main>
+</body>
+</html>
