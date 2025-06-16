@@ -1,0 +1,165 @@
+.banner-header{
+    width: 100%;
+    padding-top: 60px;
+    height: 500px;  
+    position: relative;
+}
+
+/*carrossel*/
+ .carousel {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-track > div {
+      min-width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #210386, #2f00ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .carousel-track > div:nth-child(2) {
+      background: linear-gradient(135deg, #33b5ff, #0099cc);
+    }
+
+    .carousel-track > div:nth-child(3) {
+      background: linear-gradient(135deg,  #594cc0, #2f00ff);
+    }
+
+    .carousel-track h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    .a {
+      padding: 10px 20px;
+      background: white;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .carousel-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev-btn { left: 10px; }
+    .next-btn { right: 10px; }
+
+    .carousel-indicators {
+      position: absolute;
+      left: 20px;
+      bottom: 15px;
+      width: 100%;
+    }
+
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: white;
+    }
+
+
+
+/*cards*/
+.cards-banner{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    bottom: 4px;
+    gap: 10px;
+}
+
+
+.card{
+    min-width: 150px;
+    flex: 0 2 170px;
+    height: 100px;
+    background-color: azure;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cards-banner .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/**/
+
+.division{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.division-text{
+  text-align: left;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.division img{
+  width: 25%;
+}
+.custom-button {
+background-color: #007bff;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.custom-button:active {
+    background-color: #185aa1;
+    transform: scale(1.1);
+}
+
+.custom-button a{
+  text-decoration: none;
+  color: white;
+}

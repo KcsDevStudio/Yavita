@@ -1,0 +1,91 @@
+.banner-clientes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex-wrap: wrap; /* Para responsividade */
+}
+
+.banner-clientes .content-text {
+    flex: 1 1 55%; /* Texto ocupa +- 55% do espaço */
+    padding: 20px;
+}
+
+.banner-clientes h2 {
+    font-size: 2.4em;
+    color: #0a395f;
+    margin-bottom: 15px;
+}
+
+.banner-clientes p {
+    font-size: 1.2em;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.banner-clientes button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.banner-clientes button a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.banner-clientes button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.banner-clientes img {
+    flex: 1 1 40%; /* Imagem ocupa +- 40% do espaço */
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 300px; /* Limita a altura da imagem para não ficar gigante */
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .banner-clientes {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .banner-clientes .content-text {
+        padding: 10px;
+    }
+
+    .banner-clientes h2 {
+        font-size: 2em;
+    }
+
+    .banner-clientes p {
+        font-size: 1.1em;
+    }
+
+    .banner-clientes button {
+        padding: 10px 20px;
+    }
+
+    .banner-clientes img {
+        max-height: 250px; /* Em telas menores a imagem fica ainda menor */
+    }
+}

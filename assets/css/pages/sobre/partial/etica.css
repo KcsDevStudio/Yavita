@@ -1,0 +1,42 @@
+.etica {
+  padding: 50px 30px;
+  max-width: 800px;
+  margin: 40px auto;
+  border-radius: 12px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.etica h2 {
+  font-size: 2.5rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.etica p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.etica button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.etica button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

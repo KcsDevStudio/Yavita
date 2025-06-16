@@ -1,0 +1,41 @@
+.planos {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column; /* Coluna para melhor responsividade */
+    align-items: center;
+    margin: 40px auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.planos h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #0a395f;
+    text-align: center;
+}
+
+.planos p {
+    max-width: 600px; /* Melhor que um width fixo */
+    color: #333;
+    font-size: 1.3em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .planos {
+        padding: 15px;
+    }
+
+    .planos h2 {
+        font-size: 1.8em;
+    }
+
+    .planos p {
+        font-size: 1.1em;
+    }
+}

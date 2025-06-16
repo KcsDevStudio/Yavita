@@ -1,0 +1,118 @@
+.depoimentos {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #f0f4f9, #ffffff);
+}
+
+.depoimentos h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    color: #0a395f;
+    text-transform: uppercase;
+}
+
+.cards-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.cards-depoimentos.expanded {
+    max-height: 2000px;
+    overflow-y: auto;
+}
+
+.depoimento {
+    background-color: #fff;
+    width: calc((100% / 3) - 1rem);
+    height: auto;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimento:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.foto-depoente {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid #007bff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.autor {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0a395f;
+    margin-bottom: 0.5rem;
+}
+
+.mensagem {
+    font-style: italic;
+    font-size: 0.95em;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+.button-coment {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.button-coment:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Query para responsividade */
+@media (max-width: 992px) {
+    .depoimento {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-depoimentos {
+        flex-direction: column;
+        align-items: center;
+        max-width: 95%;
+    }
+
+    .depoimento {
+        width: 100%;
+        max-width: 400px;
+    }
+}

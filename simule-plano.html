@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="assets/css/pages/simule-seu-plano/simulacao.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simulador de Plano de Saúde</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="menu-desktop">
+        <img src="assets/images/logos/YavitaLogo.png" alt="Logotipo Yavita" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="simule-plano.html">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <div class="icon-container">
+            <i
+              class="bi bi-person-circle custom-icon"
+              onclick="toggleLoginLink()"
+            ></i>
+            <div id="loginLink" class="login-link">
+              <a href="login.html">Sou cliente</a>
+              <a href="login.html#cadastroForm">Cadastrar</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="menu-moba" id="menuMoba" aria-label="Menu móvel">
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="simule-plano.html">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="container">
+        <h1>Simulador de Plano de Saúde</h1>
+        <form id="simuladorForm">
+          <label for="idade">Sua Idade:</label>
+          <input type="number" id="idade" name="idade" min="0" required />
+
+          <label for="dependentes">Número de Dependentes:</label>
+          <input
+            type="number"
+            id="dependentes"
+            name="dependentes"
+            min="0"
+            required
+          />
+
+          <label for="cobertura">Cobertura:</label>
+          <select id="cobertura" name="cobertura" required>
+            <option value="basico">Básico</option>
+            <option value="intermediario">Intermediário</option>
+            <option value="completo">Completo</option>
+          </select>
+
+          <button type="submit">Calcular</button>
+        </form>
+
+        <div id="resultado" class="resultado"></div>
+      </section>
+    </main>
+    <script src="assets/js/simulacao/simulacao.js"></script>
+    <script src="assets/js/menu/scrptMenu.js"></script>
+  </body>
+</html>

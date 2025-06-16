@@ -1,0 +1,124 @@
+.banner-sobre {
+  display: flex;
+  justify-content: space-between;
+  height: 400px;
+  padding-top: 60px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Conteúdo com fundo azul, preenchendo metade do banner */
+.banner-sobre > .conteudo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 50px;
+  width: 50%;
+  background-color: rgb(0, 123, 255);
+  position: relative;
+  z-index: 2;
+  box-shadow: 8px 0 20px rgba(0,0,0,0.3);
+}
+
+/* Efeito degradê no limite entre conteúdo e imagem usando before */
+.banner-sobre > .conteudo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 123, 255, 1), rgba(0, 123, 255, 0));
+  z-index: 1;
+}
+
+/* Imagem ocupa a outra metade, com ajuste e corte */
+.banner-sobre > img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+/* Efeito hover na imagem para dar um destaque */
+.banner-sobre > img:hover {
+  filter: brightness(1);
+}
+
+/* Estilos do texto */
+p {
+  font-size: 1.2em;
+  color: white;
+  margin: 0;
+}
+
+p a {
+  text-decoration: none;
+  color: #d0e8ff;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3em;
+  color: white;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h4 {
+  font-size: 1.4em;
+  color: white;
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Manter todo o CSS anterior para desktop */
+
+/* Media query para tablets e smartphones */
+@media (max-width: 768px) {
+  .banner-sobre {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .banner-sobre > .conteudo {
+    width: 100%;
+    padding: 30px 20px;
+    box-shadow: none;
+  }
+
+  .banner-sobre > .conteudo::before {
+    display: none;
+  }
+
+  /* Esconder a imagem completamente em telas pequenas */
+  .banner-sobre > img {
+    display: none;
+  }
+}
+
+/* Ajustes para telas muito pequenas */
+@media (max-width: 400px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}

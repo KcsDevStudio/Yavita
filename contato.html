@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="assets/css/pages/contato/contato.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Plano de Saúde Vida+</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="menu-desktop">
+        <img src="assets/images/logos/YavitaLogo.png" alt="Logotipo Yavita" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="#">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <div class="icon-container">
+            <i
+              class="bi bi-person-circle custom-icon"
+              onclick="toggleLoginLink()"
+            ></i>
+            <div id="loginLink" class="login-link">
+              <a href="login.html">Sou cliente</a>
+              <a href="login.html#cadastroForm">Cadastrar</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="menu-moba" id="menuMoba" aria-label="Menu móvel">
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="#">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <form action="enviar_contato.php" method="POST">
+          <label for="nome">Nome completo:</label>
+          <input type="text" id="nome" name="nome" required />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="telefone">Telefone:</label>
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(00) 00000-0000"
+            required
+          />
+
+          <label for="assunto">Assunto:</label>
+          <select id="assunto" name="assunto" required>
+            <option value="">Selecione</option>
+            <option value="duvida">Dúvida</option>
+            <option value="orcamento">Solicitar Orçamento</option>
+            <option value="suporte">Suporte</option>
+            <option value="outros">Outros</option>
+          </select>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            placeholder="Escreva aqui sua mensagem..."
+            required
+          ></textarea>
+
+          <button type="submit">Enviar Mensagem</button>
+        </form>
+        <div class="footer">
+          <p>Atendimento de segunda a sexta, das 08h às 18h.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="assets/js/menu/scrptMenu.js"></script>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contato - Plano de Saúde Vida+</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f0f4f8;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background: #fff;
+        padding: 2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        color: #00695c;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      label {
+        margin-top: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input,
+      textarea,
+      select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        padding: 12px;
+        background-color: #009688;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #00796b;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 2rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <form action="enviar_contato.php" method="POST">
+        <label for="nome">Nome completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefone">Telefone:</label>
+        <input
+          type="tel"
+          id="telefone"
+          name="telefone"
+          placeholder="(00) 00000-0000"
+          required
+        />
+
+        <label for="assunto">Assunto:</label>
+        <select id="assunto" name="assunto" required>
+          <option value="">Selecione</option>
+          <option value="duvida">Dúvida</option>
+          <option value="orcamento">Solicitar Orçamento</option>
+          <option value="suporte">Suporte</option>
+          <option value="outros">Outros</option>
+        </select>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea
+          id="mensagem"
+          name="mensagem"
+          placeholder="Escreva aqui sua mensagem..."
+          required
+        ></textarea>
+
+        <button type="submit">Enviar Mensagem</button>
+      </form>
+      <div class="footer">
+        <p>Atendimento de segunda a sexta, das 08h às 18h.</p>
+      </div>
+    </div>
+  </body>
+</html>

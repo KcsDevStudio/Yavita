@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/pages/index/index.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/logos/Icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Yavita</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu-desktop">
+        <img src="assets/images/logos/YavitaLogo.png" alt="Logotipo Yavita" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="simule-plano.html">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <div class="icon-container">
+            <i
+              class="bi bi-person-circle custom-icon"
+              onclick="toggleLoginLink()"
+            ></i>
+            <div id="loginLink" class="login-link">
+              <a href="login.html">Sou cliente</a>
+              <a href="login.html#cadastroForm">Cadastrar</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="menu-moba" id="menuMoba" aria-label="Menu móvel">
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="simule-plano.html">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="banner-header">
+        <div class="carousel" id="carousel">
+          <div class="carousel-track" id="track">
+            <div>
+              <div class="division">
+                <div class="division-text">
+                  <h2>Teleconsulta de Urgência Yavita</h2>
+                  <button class="custom-button">
+                    <a href="sobre.html">Saiba mais</a>
+                  </button>
+                </div>
+                <img src="assets/images/peson/doutor.png" alt="doutor" />
+              </div>
+            </div>
+          </div>
+          <button class="carousel-btn prev-btn">&#10094;</button>
+          <button class="carousel-btn next-btn">&#10095;</button>
+          <div class="carousel-indicators" id="indicators"></div>
+        </div>
+
+      <section class="newsletters-with-cards" id="planos">
+        <h2 class="gabiarra">
+          Planos de saúde e odontológicos para você, sua família ou sua empresa.
+        </h2>
+
+        <div class="Planos-odonto">
+          <div
+            class="card-news"
+            style="
+              background-image: url(https://media.sankhya.com.br/wp-content/uploads/2019/06/gestao-de-empresas.jpg);
+            "
+          >
+            <div class="invisible-card">
+              <h2>Planos de Saúde Empresariais</h2>
+            </div>
+            <div class="message">
+              <h2>Planos de Saúde Empresariais</h2>
+              <p>
+                Garantimos atendimento de qualidade para seus colaboradores com
+                planos flexíveis para empresas de todos os portes. Coberturas
+                regionais e nacionais disponíveis.
+              </p>
+              <button>Conheça</button>
+            </div>
+          </div>
+
+          <div class="card-news">
+            <div class="invisible-card" style="background-image: url(assets/images/peson/inclusao.jpeg); background-size: cover;">
+              <h2>Planos de Saúde Familiar</h2>
+            </div>
+            <div class="message">
+              <h2>Planos de Saúde Familiar</h2>
+              <p>
+                Proteja quem você ama com planos que atendem toda a família,
+                oferecendo ampla rede credenciada e atendimento humanizado.
+              </p>
+              <button>Conheça</button>
+            </div>
+          </div>
+
+          <div
+            class="card-news"
+            style="
+              background-image: url('assets/images/peson/doutora.jpeg');
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="invisible-card">
+              <h2>Plano Odontológico Individual</h2>
+            </div>
+            <div class="message">
+              <h2>Plano Odontológico Individual</h2>
+              <p>
+                Cuidamos do seu sorriso com atendimento especializado e
+                cobertura completa para consultas, tratamentos e prevenção.
+              </p>
+              <button>Conheça</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner-clientes">
+        <div class="content-text">
+          <h2>Mais de 10 Mil Clientes</h2>
+          <p>
+            Oferecemos planos de saúde personalizados para você e sua família,
+            com ampla cobertura, rede de atendimento qualificada e benefícios
+            exclusivos. Cuidar da sua saúde nunca foi tão fácil e acessível.
+            Descubra a melhor opção para o seu bem-estar e tenha mais
+            tranquilidade no dia a dia.
+          </p>
+          <button><a href="#">Fale conosco</a></button>
+        </div>
+        <img
+          src="assets/images/peson/yavita.jpeg"
+          alt="Imagem banner"
+        />
+      </section>
+
+      <section class="depoimentos">
+        <h1>Depoimentos</h1>
+        <div class="cards-depoimentos" id="depoimentos">
+          <div class="depoimento">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.21.34.jpeg"
+              alt="Foto de Ana P."
+              class="foto-depoente"
+            />
+            <p class="autor">Ana P. - Cliente Yavita</p>
+            <p class="mensagem">
+              "Com o plano da Yavita, minha família tem atendimento de qualidade
+              e sem burocracia. Atendimento rápido e profissionais atenciosos,
+              recomendo muito!"
+            </p>
+          </div>
+
+          <div class="depoimento">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.21.18.jpeg"
+              alt="Foto de Carlos M."
+              class="foto-depoente"
+              style="background-position: top"
+            />
+            <p class="autor">Carlos M. - Empresário</p>
+            <p class="mensagem">
+              "Escolhi a Yavita para cuidar da saúde dos meus funcionários. O
+              suporte é excelente e a cobertura ampla faz toda diferença para
+              nossa tranquilidade."
+            </p>
+          </div>
+
+          <div class="depoimento">
+            <img
+              src="assets/images/peson/Ladrao.jpeg"
+              alt="Foto de Maria T."
+              class="foto-depoente"
+            />
+            <p class="autor">Maria T. - Autônoma</p>
+            <p class="mensagem">
+              "Ter um plano de saúde da Yavita me trouxe segurança e comodidade.
+              Sempre que precisei, fui atendida com agilidade e respeito."
+            </p>
+          </div>
+
+          <!-- depoimentos extras -->
+          <div class="depoimento hidden">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.21.34.jpeg"
+              alt="Foto de João P."
+              class="foto-depoente"
+            />
+            <p class="autor">João P. - Professor</p>
+            <p class="mensagem">
+              "A Yavita oferece um plano acessível e com ampla rede de clínicas
+              e hospitais. Sinto que minha saúde está nas mãos certas."
+            </p>
+          </div>
+
+          <div class="depoimento hidden">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.21.18.jpeg"
+              alt="Foto de Fernanda L."
+              class="foto-depoente"
+            />
+            <p class="autor">Fernanda L. - Designer Gráfico</p>
+            <p class="mensagem">
+              "Adoro a facilidade de agendar consultas pelo app da Yavita. O
+              atendimento é excelente e a equipe muito atenciosa."
+            </p>
+          </div>
+
+          <div class="depoimento hidden">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.21.34.jpeg"
+              alt="Foto de Lucas S."
+              class="foto-depoente"
+            />
+            <p class="autor">Lucas S. - Atleta</p>
+            <p class="mensagem">
+              "O plano da Yavita cobre todos os exames que preciso para manter
+              minha saúde em dia. Estou muito satisfeito com o serviço."
+            </p>
+          </div>
+
+          <div class="depoimento hidden">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.20.56.jpeg"
+              alt="Foto de Patricia M."
+              class="foto-depoente"
+            />
+            <p class="autor">Patrícia M. - Mãe e Dona de Casa</p>
+            <p class="mensagem">
+              "Com o plano Yavita, minha família tem acesso a especialistas e
+              exames sem esperar meses. Isso faz toda a diferença para nosso
+              bem-estar."
+            </p>
+          </div>
+
+          <div class="depoimento hidden">
+            <img
+              src="assets/images/peson/WhatsApp Image 2025-06-16 at 19.22.08.jpeg"
+              alt="Foto de Ricardo F."
+              class="foto-depoente"
+            />
+            <p class="autor">Ricardo F. - Empresário</p>
+            <p class="mensagem">
+              "A Yavita oferece planos que realmente atendem às necessidades da
+              minha empresa. A assistência é rápida e eficiente."
+            </p>
+          </div>
+        </div>
+        <button class="button-coment" id="buttoncomente">Ver mais</button>
+      </section>
+      <footer>
+         <div class="footer-container">
+        <!-- Sobre -->
+        <div class="footer-section">
+            <h3>Sobre a Yavita</h3>
+            <p>Yavita é uma empresa especializada em oferecer planos de saúde completos e acessíveis para você e sua família. Estamos comprometidos com o bem-estar e saúde de nossos clientes.</p>
+        </div>
+
+        <!-- Links úteis -->
+        <div class="footer-section">
+            <h3>Links Úteis</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="#planos">Planos de Saúde</a></li>
+                <li><a href="simule-plano.html">Simule seu Plano</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="contato.html">Contatos</a></li>
+            </ul>
+        </div>
+
+        <!-- Redes Sociais com links personalizados -->
+        <div class="footer-section">
+            <h3>Redes Sociais</h3>
+            <div class="social-icons">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/yavitaoficial" target="_blank" class="social-icon" title="Facebook Yavita">
+                    <i class="bi bi-facebook"></i>
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/yavitaoficial" target="_blank" class="social-icon" title="Twitter Yavita">
+                    <i class="bi bi-twitter"></i>
+                </a>
+
+                <!-- WhatsApp com mensagem personalizada -->
+                <a href="https://wa.me/5585987654321?text=Olá%2C+gostaria+de+saber+mais+sobre+os+planos+de+saúde+da+Yavita." 
+                   target="_blank" class="social-icon" title="Converse conosco pelo WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/yavitaoficial" target="_blank" class="social-icon" title="Instagram Yavita">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Contato -->
+        <div class="footer-section">
+            <h3>Entre em Contato</h3>
+            <p><strong>Telefone:</strong> (85) 98765-4321</p>
+            <p><strong>Email:</strong> contato@yavita.com.br</p>
+            <p><strong>Endereço:</strong> Av. Desembargador Moreira, 1300 – Aldeota, Fortaleza – CE, 60170-002</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 Yavita. Todos os direitos reservados.</p>
+    </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/menu/scrptMenu.js"></script>
+    <script src="assets/js/carrosel/carrossel.js"></script>
+    <script src="assets/js/depoimentos/depoimentos.js"></script>
+    <script src="assets/js/FAQ/FAQ.js"></script>
+  </body>
+</html>

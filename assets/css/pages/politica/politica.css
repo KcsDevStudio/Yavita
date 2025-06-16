@@ -1,0 +1,118 @@
+@import "../../global/global.css";
+
+.politicas {
+  display: flex;
+  padding: 5rem;
+  gap: 2rem;
+}
+
+.indice {
+  flex: 0 0 280px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.indice h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.indice ul {
+  list-style: none;
+}
+
+.indice ul li {
+  margin-bottom: 0.75rem;
+}
+
+.indice ul li a {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.indice ul li a:hover {
+  color: #1a73e8;
+}
+
+.close-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.politicas > div {
+  flex: 1;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.politicas section {
+  margin-bottom: 2rem;
+}
+
+.politicas h2 {
+  color: #1a73e8;
+  margin-bottom: 1rem;
+}
+
+.politicas p,
+.politicas ul {
+  margin-bottom: 1rem;
+}
+
+.politicas ul {
+  padding-left: 1.5rem;
+}
+
+.politicas ul li {
+  list-style: disc;
+}
+
+@media (max-width: 992px) {
+  .politicas {
+    flex-direction: column;
+  }
+
+  .indice {
+    flex: 1;
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .indice {
+    display: none;
+  }
+
+  .indice.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: #fff;
+    padding: 2rem;
+    z-index: 1050;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .close-menu {
+    display: block;
+  }
+}

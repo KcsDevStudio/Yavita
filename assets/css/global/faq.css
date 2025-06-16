@@ -1,0 +1,62 @@
+.faq-section {
+        max-width: 800px;
+        margin: 0 auto 60px;
+        padding-bottom: 40px;
+        border-top: 2px solid #0a9396;
+      }
+      .faq-section h2 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      .faq-item {
+        background: white;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+      .faq-question {
+        padding: 15px 20px;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        user-select: none;
+        background-color: #0a9396;
+        color: white;
+      }
+      .faq-question::after {
+        content: "+";
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        transition: transform 0.3s ease;
+      }
+      .faq-question.active::after {
+        content: "-";
+        transform: rotate(180deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        padding: 0 20px;
+        background: #e0f7f7;
+        color: #023e3e;
+        font-weight: normal;
+        line-height: 1.5;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        overflow: hidden;
+      }
+      .faq-answer.open {
+        padding: 15px 20px;
+        max-height: 200px; /* valor alto suficiente para a resposta */
+      }
+
+      /* Responsivo */
+      @media (max-width: 720px) {
+        .Planos-odonto {
+          flex-direction: column;
+          align-items: center;
+        }
+        .card-news {
+          max-width: 90%;
+        }
+      }

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/pages/login/login.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/logos/Icon.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <title>Yavita - Login</title>
+  </head>
+  <body>
+    <header>
+      <nav class="menu-desktop">
+        <img src="assets/images/logos/YavitaLogo.png" alt="Logotipo Yavita" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="#planos">Plano de Saude</a></li>
+          <li><a href="#">Simule seu plano</a></li>
+          <li><a href="#depoimentos">Depoimento</a></li>
+          <li><a href="#">Contato</a></li>
+          <div class="icon-container">
+            <i
+              class="bi bi-person-circle custom-icon"
+              onclick="toggleLoginLink()"
+            ></i>
+            <div id="loginLink" class="login-link">
+              <a href="login.html">Sou cliente</a>
+              <a href="login.html#cadastroForm">Cadastrar</a>
+            </div>
+          </div>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <nav class="menu-moba" id="menuMoba" aria-label="Menu móvel">
+        <button class="close-menu" id="closeMenu" aria-label="Fechar menu">
+          <i class="bi bi-x"></i>
+        </button>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="#">Plano de Saude</a></li>
+          <li><a href="#">Simule seu plano</a></li>
+          <li><a href="#">Depoimento</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="form-container">
+        <div class="form-wrapper" id="formWrapper">
+          <form action="login.php" method="POST" id="loginForm" class="form">
+            <h2>Login</h2>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Digite seu email"
+              required
+            />
+
+            <label for="password">Senha:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Digite sua senha"
+              required
+            />
+
+            <button type="submit">Entrar</button>
+            <button type="button" id="cadastre">Não sou usuário</button>
+          </form>
+
+          <form
+            action="cadastro.php"
+            method="POST"
+            id="cadastroForm"
+            class="form-cadastro"
+          >
+            <h2>Cadastro</h2>
+            <label for="name">Nome:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Digite seu nome"
+              required
+            />
+
+            <label for="emailCadastro">Email:</label>
+            <input
+              type="email"
+              id="emailCadastro"
+              name="email"
+              placeholder="Digite seu email"
+              required
+            />
+
+            <label for="passwordCadastro">Senha:</label>
+            <input
+              type="password"
+              id="passwordCadastro"
+              name="password"
+              placeholder="Digite sua senha"
+              required
+            />
+
+            <label for="date">Confirmar Senha:</label>
+            <input type="date" id="Data" name="date" required />
+
+            <span class="genero-toggle" onclick="mostrarOpcoes()"
+              >Selecionar Gênero</span
+            >
+            <div class="opcoes-genero" id="opcoesGenero">
+              <input
+                type="radio"
+                name="genero"
+                id="masculino"
+                value="Masculino"
+              />
+              <label for="masculino">Masculino</label><br />
+
+              <input
+                type="radio"
+                name="genero"
+                id="feminino"
+                value="Feminino"
+              />
+              <label for="feminino">Feminino</label><br />
+
+              <input type="radio" name="genero" id="outros" value="Outros" />
+              <label for="outros">Outros</label><br />
+            </div>
+
+            <button type="submit">Cadastrar</button>
+            <button type="button" id="voltar">Voltar</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/login/scriptLogin.js"></script>
+    <script src="assets/js/menu/scrptMenu.js"></script>
+  </body>
+</html>
